@@ -10,11 +10,11 @@ services:
       - ${DEFAULT_DIR}/wpcl:/var/www/html
       - ${PHP_DIR}/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
     environment:
-      - VIRTUAL_HOST=cepatlakoo.test
-      - WORDPRESS_DB_USER=wpcl
-      - WORDPRESS_DB_NAME=cepatlakoo
-      - WORDPRESS_TABLE_PREFIX=cl_
-      - WORDPRESS_DB_PASSWORD=wpclpass
+      - VIRTUAL_HOST=
+      - WORDPRESS_DB_USER=
+      - WORDPRESS_DB_NAME=
+      - WORDPRESS_TABLE_PREFIX=
+      - WORDPRESS_DB_PASSWORD=
       - WORDPRESS_DB_HOST=mariadb
       - MYSQL_PORT_3306_TCP=4306
     depends_on:
@@ -27,10 +27,10 @@ services:
     volumes:
       - ${SQLDATA_DIR}:/var/lib/mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=toor
-      - MYSQL_DATABASE=cepatlakoo
-      - MYSQL_USER=wpcl
-      - MYSQL_PASSWORD=wpclpass
+      - MYSQL_ROOT_PASSWORD=
+      - MYSQL_DATABASE=
+      - MYSQL_USER=
+      - MYSQL_PASSWORD=
     restart: unless-stopped
     ports:
       - "4306:3306"
